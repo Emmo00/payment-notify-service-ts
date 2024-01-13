@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsc --project './tsconfig.build.json' --watch &NODE_ENV=development nodemon --trace-warnings ./dist/index.js",
-    "build": "tsc --project './tsconfig.build.json'",
-    "start": "npm run build && NODE_ENV=production node --trace-warnings ./dist/index.js",
+    "dev": "tsc --project ./tsconfig.build.json --watch && nodemon ./dist/index.js",
+    "build": "tsc --project ./tsconfig.build.json",
+    "start": "npm run build && node --trace-warnings ./dist/index.js",
     "format": "prettier --write ."
   },
   "keywords": [],
@@ -32,6 +32,7 @@
     "@types/morgan": "^1.9.9",
     "@types/nodemailer": "^6.4.14",
     "husky": "^8.0.3",
+    "nodemon": "^3.0.2",
     "prettier": "^3.2.1",
     "prettier-eslint": "^16.2.0",
     "typescript": "^5.3.3"

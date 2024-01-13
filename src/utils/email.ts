@@ -5,7 +5,7 @@ import transporter from '../config/email';
 import { WebhookBody } from 'src/types/types';
 
 const successEmailTemplate = fs
-  .readFileSync('./templates/success.ejs')
+  .readFileSync('templates/success.ejs')
   .toString('utf-8');
 
 export function sendSuccessEmailNotificationEmail(paymentInfo: WebhookBody) {

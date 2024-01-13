@@ -20,3 +20,5 @@ app.get('/api/status', (req: Request, res: Response) => {
   res.status(200);
   res.json({ status: 'active' });
 });
+
+export default app;

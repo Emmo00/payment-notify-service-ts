@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { paymentWebhookHandler } from 'src/controller/webhookCallback';
+import { paymentWebhookHandler } from '../controller/webhookCallback';
 
 const router = Router();
 
-router.post('/', paymentWebhookHandler);
+router.post('/webhook-callback', paymentWebhookHandler);
 
 export default router;
