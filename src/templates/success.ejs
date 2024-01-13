@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Successful Payment</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+      }
+      td {
+        padding: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Payment successfully received</h1>
+    <table>
+      <tr>
+        <th>Amount</th>
+        <td><%= paymentInfo.currency %><%= paymentInfo.amount %></td>
+      </tr>
+      <tr>
+        <th>From</th>
+        <td>
+          <%= paymentInfo.customer.name %> - <%= paymentInfo.customer.email %>
+        </td>
+      </tr>
+      <tr>
+        <th>Date</th>
+        <td><%= new Date(paymentInfo.created_at).toLocaleString() %></td>
+      </tr>
+      <tr>
+        <th>Narration</th>
+        <td><%= paymentInfo.narration %></td>
+      </tr>
+    </table>
+  </body>
+</html>
